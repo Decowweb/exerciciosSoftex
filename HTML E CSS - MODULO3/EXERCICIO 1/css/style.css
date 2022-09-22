@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+html{
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family:'Roboto', sans-serif
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: #1b1b32;
+    background-image: url(../Imagens/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity:.4
+}
+
+.flex-container-center{
+    width: 40%;
+    margin: 0 auto;
+    background-color: rgba(244, 206, 137, 0.5);
+    padding: 2rem;
+    box-shadow: 2px 2.5px 10px rgb(56, 56, 56)
+
+}
+
+h1{
+    margin: 0;
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.7rem;
+    text-align: justify;
+}
+
+footer{
+    margin-top: 10rem;
+}
+
+.center-link{
+    display: flex;
+    justify-content: center;
+}
+
+a{  
+    margin-top:3rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: rgba(244, 206, 137);
+    color:black;
+    padding: 1rem;
+    border-radius:1rem;
+    font-weight: bold;
+    border: solid 2px black;
+    transition: all 0.3s linear
+}
+
+a:hover {
+    background-color: rgb(251, 229, 185);
+    opacity: .8;
+}
