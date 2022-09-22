@@ -26,10 +26,17 @@ body::before {
     opacity:.4
 }
 
+.center-with-flex{
+    display: flex;
+    justify-content: center;
+}
+
 .flex-container-center{
+    display: flex;
+    flex-direction: column;
     width: 40%;
-    margin: 0 auto;
     background-color: rgba(244, 206, 137, 0.5);
+    gap:1rem;
     padding: 2rem;
     box-shadow: 2px 2.5px 10px rgb(56, 56, 56)
 
@@ -46,6 +53,7 @@ h2{
 }
 
 p{
+    margin:0;
     font-size: 1.7rem;
     text-align: justify;
 }
