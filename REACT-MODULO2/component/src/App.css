@@ -1,0 +1,9 @@
+input {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top:10rem;
+  width:20rem;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
