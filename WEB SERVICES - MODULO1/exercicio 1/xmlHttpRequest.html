@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #01</title>
+
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Cadastros</h1>
+
+    <script>
+        function ajax(config) { //Essa função vai receber um objeto que representa as configurações
+            const xhr = new XMLHttpRequest()
+            /*XMLHttpRequest é um objeto que fornece funcionalidade 
+            ao cliente para transferir dados entre um cliente e um servidor.*/
+            xhr.open(config.metodo, config.url, true)
+            /* Abrir uma requisição do tipo get. Receber dentro de
+            uma propriedade chamada url. E o true quer dizer que vai ser executado de forma assincrona*/
+
+            xhr.onload = e => {
+                console.log(xhr.status)
+                if (xhr.status === 200) { //o numero 200 é igual a requisição feita com sucesso
+                    config.sucesso(xhr
+                        .response) //Chamar a função sucesso com os dados obtidos da requisição como argumento
+                } else if (xhr.status >= 400) { //o numero 400 pra cima requisição sem sucesso
+                    config.erro({
+                        codigo: xhr.status,
+                        texto: xhr.statusText
+                    })
+                }
+            }
+            //vai enviar a requisição
+            xhr.send()
+        }
+        ajax({
+            url: 'dados/cadastros.json',
+            /*O url do servidor onde estão armazenados os dados. 
+            Nesse caso criei uma estrutura JSON simulando um conjunto de dados que vem
+            do back-end*/
+            metodo: 'get', //Método HTTP do tipo GET para obter dados do servidor.
+            sucesso(resposta) {
+                const cadastros = JSON.parse(resposta) //Convertendo do formato JSON para objeto javascript
+                cadastros.forEach((item,
+                index) => { //forEach para pegar todos as informações dos cadastrados e colocá-lo na tela
+                    let elementDiv = document.createElement('div')
+                    elementDiv.innerHTML =
+                        `Nome: ${cadastros[index].nome},<br>Endereço: ${cadastros[index].endereco},   <br>Telefone: ${cadastros[index].telefone} <br> <br> `
+                    document.body.appendChild(elementDiv)
+                });
+            },
+            erro(e) {
+                //Caso haja algum erro na requisição, 
+                const msg = document.createTextNode(`Error${e.codigo}: ${e.texto}`)
+                document.body.appendChild(msg)
+            }
+        })
+    </script>
+</body>

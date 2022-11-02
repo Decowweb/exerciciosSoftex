@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "nome": "André",
+        "endereco": "Estrada de aldeia",
+        "telefone": "81989899767"
+    },
+    {
+        "id": 2,
+        "nome": "João",
+        "endereco": "Recife",
+        "telefone": "81959699767"
+    },
+    {
+        "id": 3,
+        "nome": "Ricardo",
+        "endereco": "graças",
+        "telefone": "81908374643"
+    }]
