@@ -10,12 +10,12 @@ div{
     color: white;
     font-weight: bolder;
     padding:5px;
-    transition: all .5s;
+    transition: all 0.5s ;
     border: black solid 1px
 }
 
 .style-link:hover{
     background-color:white;
     color: black;
-    
+    padding:7px;
 }
