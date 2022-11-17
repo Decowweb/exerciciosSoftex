@@ -20,7 +20,6 @@
             uma propriedade chamada url. E o true quer dizer que vai ser executado de forma assincrona*/
 
             xhr.onload = e => {
-                console.log(xhr.status)
                 if (xhr.status === 200) { //o numero 200 é igual a requisição feita com sucesso
                     config.sucesso(xhr
                         .response) //Chamar a função sucesso com os dados obtidos da requisição como argumento
