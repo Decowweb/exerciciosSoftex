@@ -2,12 +2,7 @@
   "alunos": [
     {
       "userId": 5,
-      "nome": "Julio",
-      "id": 7
-    },
-    {
-      "userId": 5,
-      "nome": "julio",
+      "nome": "Mudei o nome",
       "id": 8
     },
     {
@@ -19,6 +14,11 @@
       "userId": 5,
       "nome": "juan",
       "id": 10
+    },
+    {
+      "userId": 5,
+      "nome": "Andre",
+      "id": 11
     }
   ]
 }
